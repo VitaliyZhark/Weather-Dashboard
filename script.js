@@ -44,3 +44,46 @@ function loadSearchHistory() {
 
     return searchHistoryArray;
 }
+
+//save to local storage
+function saveSearchHistory() {
+    localStorage.setItem('search history', JSON.stringify(searchHistoryArray));
+};
+
+//funciton to create history buttons
+function searchHistory(city) {
+    var searchHistoryBtn = $('<button>')
+        .addClass('btn')
+        .text(city)
+        .on('click', function () {
+            $('#current-weather').remove();
+            $('#five-day').empty();
+            $('#five-day-header').remove();
+            getWeather(city);
+        })
+        .attr({
+            type: 'button'
+        });
+
+    // append btn to search history div
+    searchHistoryEl.append(searchHistoryBtn);
+}
+
+//function to get weather data from apiUrl
+function getWeather(city) {
+    // apiUrl for coordinates
+    var apiCoordinatesUrl = openWeatherCoordinatesUrl + city + '&appid=' + openWeatherApiKey;
+    // fetch the coordinates for parameter city
+    fetch(apiCoordinatesUrl)
+        .then(function (coordinateResponse) {
+            if (coordinateResponse.ok) {
+                coordinateResponse.json().then(function (data) {
+                    var cityLatitude = data.coord.lat;
+                    var cityLongitude = data.coord.lon;
+                    // fetch weather information
+                    var apiOneCallUrl = oneCallUrl + cityLatitude + '&lon=' + cityLongitude + '&appid=' + openWeatherApiKey + '&units=imperial';
+
+                    fetch(apiOneCallUrl)
+                        .then(function (weatherResponse) {
+                            if (weatherResponse.ok) {
+                                weatherResponse.json().then(function (weatherData) {
