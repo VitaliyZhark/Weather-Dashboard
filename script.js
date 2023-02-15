@@ -141,4 +141,24 @@ function getWeather(city) {
 
                                             currWeatherListItem.append(uviItem);
 
-                                            
+                                            //create every list item that isn't uvIndex
+                                        } else {
+                                            var currWeatherListItem = $('<li>')
+                                                .text(currWeatherDetails[i])
+                                            //append to ul
+                                            currWeatherListEl.append(currWeatherListItem);
+                                        }
+
+                                    }
+
+                                    //append curr weather div to col2 before #five-day
+                                    $('#five-day').before(currentWeatherEl);
+                                    //append current weather heading to current weather div
+                                    currentWeatherEl.append(currentWeatherHeadingEl);
+                                    //append icon to current weather header
+                                    currentWeatherHeadingEl.append(iconImgEl);
+                                    //append ul to current weather
+                                    currentWeatherEl.append(currWeatherListEl);
+
+
+                                    
