@@ -175,4 +175,29 @@ function getWeather(city) {
                                     //append 5 day forecast header to col2 after current weather div
                                     $('#current-weather').after(fiveDayHeaderEl)
 
-                                    
+                                    // create array for the dates for the next 5 days
+
+                                    var fiveDayArray = [];
+
+                                    for (var i = 0; i < 5; i++) {
+                                        let forecastDate = moment().add(i + 1, 'days').format('M/DD/YYYY');
+
+                                        fiveDayArray.push(forecastDate);
+                                    }
+
+                                    // for each date in the array create a card displaying temp, wind and humidity
+                                    for (var i = 0; i < fiveDayArray.length; i++) {
+                                        // create a div for each card
+                                        var cardDivEl = $('<div>')
+                                            .addClass('col3');
+
+                                        // create div for the card body
+                                        var cardBodyDivEl = $('<div>')
+                                            .addClass('card-body');
+
+                                        // create the card-title
+                                        var cardTitleEl = $('<h3>')
+                                            .addClass('card-title')
+                                            .text(fiveDayArray[i]);
+
+                                            
