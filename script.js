@@ -87,3 +87,27 @@ function getWeather(city) {
                         .then(function (weatherResponse) {
                             if (weatherResponse.ok) {
                                 weatherResponse.json().then(function (weatherData) {
+
+
+                                     // ** START CURRENT DAY DISPLAY ** //
+
+                                    //add div to hold current day details
+                                    var currentWeatherEl = $('<div>')
+                                        .attr({
+                                            id: 'current-weather'
+                                        })
+
+                                    // get the weather icon from city
+                                    var weatherIcon = weatherData.current.weather[0].icon;
+                                    var cityCurrentWeatherIcon = weatherIconUrl + weatherIcon + '.png';
+
+                                    // create h2 to display city + current day + current weather icon
+                                    var currentWeatherHeadingEl = $('<h2>')
+                                        .text(city + ' (' + currentDay + ')');
+                                    // create img element to display icon
+                                    var iconImgEl = $('<img>')
+                                        .attr({
+                                            id: 'current-weather-icon',
+                                            src: cityCurrentWeatherIcon,
+                                            alt: 'Weather Icon'
+                                        })
