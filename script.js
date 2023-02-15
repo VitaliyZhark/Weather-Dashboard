@@ -161,4 +161,18 @@ function getWeather(city) {
                                     currentWeatherEl.append(currWeatherListEl);
 
 
+                                    // ** END CURRENT DAY DISPLAY ** //
+
+                                    // ** START 5-DAY FORECAST DISPLAY ** //
+
+                                    //create h2 header for 5-day forecast
+                                    var fiveDayHeaderEl = $('<h2>')
+                                        .text('5-Day Forecast:')
+                                        .attr({
+                                            id: 'five-day-header'
+                                        })
+
+                                    //append 5 day forecast header to col2 after current weather div
+                                    $('#current-weather').after(fiveDayHeaderEl)
+
                                     
