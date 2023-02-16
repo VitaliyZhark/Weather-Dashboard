@@ -283,3 +283,13 @@ function submitCitySearch(event) {
         alert('Please enter a city');
     }
 }
+
+// on submission of user data get user input for city and fetch api data
+userFormEL.on('submit', submitCitySearch);
+
+// on click of search button - empty the current weather and 5-day forecast info
+$('#search-btn').on('click', function () {
+    $('#current-weather').remove();
+    $('#five-day').empty();
+    $('#five-day-header').remove();
+})
