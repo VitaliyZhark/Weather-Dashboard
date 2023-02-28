@@ -33,7 +33,7 @@
 
 <h2 id="Preview">Preview</h2>
 <p>The following image shows the web application's appearance and functionality:</p>
-<img width="300px" height="auto" src="https://github.com/VitaliyZhark/Weather-App/img/08-server-side-apis-homework-demo">
+<img width="300px" height="auto" src="https://github.com/VitaliyZhark/Weather-App/img/08-server-side-apis-homework-demo.png">
 <p>Feel free to use my own colors and images.</p>
 
 <h2 id="Contributing">Contributing</h2>
