@@ -1,4 +1,4 @@
-/* add default's to weppage */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,9 @@
     font-size: 62.5%;
 }
 
-/* used to help determine layout */
+
 .border {
-    border: 1px solid black;
+    border: 1px solid rgb(44, 44, 44);
 }
 
 .spacebetween{
@@ -42,33 +42,33 @@
 }
 
 
-/* make body full page size depending on viewport */
+
 body { min-height: 100vh; }
 
-/* style the header */
+/* STYLE THE HEADER */
 header {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px;
-    background-color: rgb(75,105,177);
-    background-image: linear-gradient(90deg, rgba(75,105,177,1) 13%, rgba(35,77,167,1) 42%, rgba(1,1,105,1) 80%);
+    background-color: rgb(97, 181, 250);
+    background-image: linear-gradient(90deg, rgb(52, 252, 255) 13%, rgb(77, 178, 255) 42%, rgb(73, 73, 255) 80%);
 }
 
 
-/* style the heading */
+
 .heading {
     color:white;
     font-size: 4rem;
     font-weight: bold;
 }
 
-/* style the h1 */
+/* STYLE THE H1 */
 .h1 {
     font-weight: bold;
     font-size: 3.25rem;
     margin: 2rem auto;
 }
-/* style the h2 */
+
 h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -82,7 +82,7 @@ h2 {
     font-size: 2rem;
     width: 100%;
     border-radius: .4rem;
-    border: .1rem solid black;
+    border: .1rem solid rgb(48, 48, 48);
     height: 4.5rem;
     padding-bottom: .5rem;
     padding-top: 0px;
@@ -101,7 +101,7 @@ h2 {
     font-size: 2rem;
     width: 100%;
     background-color: lightgrey;
-    color: black;
+    color: rgb(54, 54, 54);
     border: none;
     border-radius: .4rem;
     margin-top: 2rem;
@@ -110,13 +110,13 @@ h2 {
 
 /* create the line break in search area */
 hr {
-    border-top: .2rem solid rgba(0,0,0, 1);
+    border-top: .2rem solid rgb(51, 51, 51);
 }
 
 /* style current weather container */
 #current-weather {
     height: 50%;
-    border: .1rem solid black;
+    border: .1rem solid rgb(47, 47, 47);
 }
 
 /* style the list in weather container */
@@ -133,12 +133,12 @@ ul {
 
 /* style the icon */
 #current-weather-icon {
-    filter: drop-shadow(0 0 0.75rem grey);
+    filter: drop-shadow(0 0 0.75rem rgb(159, 159, 159));
 }
 
 /* style the uv index background */
 .favorable {
-    background-color: green;
+    background-color: rgb(50, 255, 50);
     font-size: 2rem;
     border-radius: .5rem;
 }
@@ -170,7 +170,7 @@ h3 {
 
 /* style the .card-body */
 .card-body {
-    background-color:#00334d;
+    background-color:#22c8ff;
     height: 20rem;
     padding-left: 4%;
     padding-top: 4%;
@@ -242,7 +242,7 @@ p {
     }
 
     .card-body {
-        background-color: #00334d;
+        background-color: #34c9ff;
         height: 20rem;
         padding-left: 0;
         padding-top: 1%;
