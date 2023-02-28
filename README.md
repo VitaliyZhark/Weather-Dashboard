@@ -1,4 +1,4 @@
-<h1><a href="https://vitaliyzhark.github.io/"> Weather-Dashboard</a></h1>
+<h1><a href="https://vitaliyzhark.github.io/Weather-Dashboard/"> Weather-Dashboard</a></h1>
 <br>
 <h2>Table of Contents</h2>
 
